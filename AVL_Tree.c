@@ -40,7 +40,8 @@ AVLTree RightLeftRotation(AVLTree a) {
 AVLTree Insert(AVLTree T, int val) {
     if (!T) {
         T = (AVLTree)malloc(sizeof(AVLNode));
-        T->data = val; T->height = 1;
+        T->data = val;
+        T->height = 1;
         T->lchild = T->rchild = NULL;
     } else if (val < T->data) {
         T->lchild = Insert(T->lchild, val);
